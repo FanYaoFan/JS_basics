@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原型</title>
+</head>
+<body>
+    
+</body>
+<script>
+// var myObject = {
+//       a : 2
+// }
+// myObject.a 
+// function Fn(){
+//     var n = 10;
+//     this.m = 100;
+// }
+// Fn.prototype.aa = function(){
+//     console.log('aa');
+// }
+// Fn.bb = function () {
+//     console.log('bb')
+// }
+
+// // 1 普通函数执行
+// // Fn() // this => window 有一个私有变量n 和原型以及属性bb没有关系
+
+// // 2 构造函数执行
+// var f = new Fn // this => f
+// console.log(f.n) // undefined n是私有变量和实例没有关系
+// console.log(f.m)  // => 100 实例的私有属性
+// f.aa()          // => 实例通过_proto_ 找到Fn.prototype上的方法
+// console.log(f.bb) // undefinded  bb是把Fn 当做一个普通的对象设置的属性而已,和实例没有任何关系
+
+// function Fn(name,age) {
+//         var n = 10
+//         this.name = name
+//         this.age = age + n
+// }
+// // 构造函数执行
+// var f1 = new Fn('xxx', 20)
+// var f2 = new Fn('aaa', 30)
+// console.log(f1.n) // => undefined 只有this.xxx = xxx 的才和实例有关系
+// // n是私有作用域的一个私有变量而已
+//   function Fn() {
+//       var n = 10 
+//       this.m = n
+//       return { name: 'hello'}
+//   }
+//   var   f = new Fn()
+//   console.log(f) 
+//     // 只写ruturn 
+//     function Fn(){
+//         var n = 10 
+//         this.m = n
+//         return   //这样return是结束代码执行的作用,并且不会覆盖返回的实例
+//         console.log(1)  // 不输出 1
+//     }
+    // fn不加括号代表函数本身,加()代表函数执行
+   
+//    function Fn() {
+//        this.x = 100;
+//        this.y = 200;
+//        this.getX = function () {
+//            console.log(this.x);
+           
+//        }
+//    }
+
+//    Fn.prototype.getX = function(){
+//        console.log(this.x)
+//    }
+//    Fn.prototype.getY = function(){
+//         console.log(this.y)
+//    }
+//     var f1 = new Fn
+//     var f2 = new Fn
+//     console.log(f1.getX === f2.getX)
+//     console.log(f1.getY === f2.getY)
+//     console.log(f1.__proto__.getY === Fn.prototype.getY);
+//     console.log(f1.__proto__getX === f2.getX);  //f2私有的
+//     console.log(f1.getX === Fn.prototype.getX);
+//     console.log(f1.constructor);
+//     console.log(Fn.prototype.__proto__.constructor);
+//     f1.getX();
+//     f1.__proto__.getX();  //f1.__proto__ 往上找而不是找自己
+//     f2.getY();
+//     Fn.prototype.getY
+    
+    // 重定向原型
+    //  function fun (){
+    //      this.a = 0
+    //      this.b = function (){
+    //          alert(this.a)
+    //      }
+    //  }
+    // fun.prototype = {    // 原型重定向,自己开辟出新的堆内存
+    //     b : function (){
+    //         this.a = 20
+    //         alert(this.a)
+    //     },
+    //     c:function(){
+    //         this.a = 30
+    //         alert(this.a)
+    //     }
+    
+    // }
+    // var my_fun = new fun()
+    // my_fun.b()
+    // my_fun.c()
+
+    // function Fn() {
+    //     var n = 10
+    //     this.m = 20
+    //     this.aa = function (){
+    //         console.log(this.m)
+    //     }
+    // }
+    // Fn.prototype.bb = function () {
+    //     console.log(this.n)
+    // }
+    // var f1 = new Fn
+    // Fn.prototype = {
+    //     aa : function(){
+    //         console.log(this.m+10)
+    //     }
+    // }
+    // var f2 = new Fn
+    // console.log(f1.constructor)
+    // console.log(f2.constructor)
+    // f1.bb()
+    // f1.aa()
+    // f1.bb()
+    // f2.aa()
+    // f2.__proto__.aa()
+    
+    //  阿里面试题
+    function Foo(){
+        getName=function Foo() {
+        console.log(1);
+        return this;
+        }
+    }
+    
+    Foo.getName=function () {
+        console.log(2);
+    }
+    Foo.prototype.getName=function(){
+        console.log(3);
+    }
+    var getName=function () {
+        console.log(4);
+    }
+    function  getName() {
+        console.log(5);
+    }  //普通函数定义，使得一开始getName为5
+    Foo.getName();
+    getName();
+    Foo().getName();
+    new Foo.getName();
+    new Foo().getName();
+    new new Foo().getName();
+
+    
+    
+
+    
+</script>
+</html>

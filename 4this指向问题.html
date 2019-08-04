@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this指向</title>
+</head>
+<body>
+    
+</body>
+<script>
+// var obj = {
+//     id:"1",
+//     cool:function coolFn(){
+//         console.log(this.id) // cool函数丢失了同this之间的绑定 
+//         //解决办法 var self = this
+//     }
+// }
+// var id = "2"
+// obj.cool(); // =>1   
+// setTimeout(obj.cool,100) // =>2
+
+
+// function identify(){
+//     return this.name.toUppercase()
+// }
+// function speak(){
+//     var greeting = "hello,I am" +identify.call(this)
+//     console.log(greeting)
+// }
+
+//  var me ={
+//      name:"kyle"
+//  }
+//  var you ={
+//      name:'reader'
+//  }
+//  identify.call(me)  // =>kyle
+//  identify.call(you) // =>reader
+// speak.call(me) // => hello,我是kyle
+// speak.call(me) // => hello,我是reader
+
+
+// // 记录foo被调用的次数
+// function foo(num){
+//     console.log("foo" +num)
+
+//     this.count++ //记录foo被调用的次数
+//     // 其实无形中在全局创建了一个count;值为NaN
+// }
+// foo.count = 0;
+// for(var i=0;i<10;i++){
+//     if(i>5){
+//         foo(i)
+//     }
+// }
+// console.log(foo.count)  //foo被调用了多少次
+
+// function foo(num){
+//     console.log( "foo: " + num );
+//     this.count++
+// }
+// foo.count = 0;
+// for (var i=0;i<10;i++){
+//     if(i>5){
+//         foo.call (foo.i)  // 使用call(...) 可以确保this指向函数对象本身
+//     }
+// }
+// console.log(foo.count) //4次
+
+// function foo(){
+//     foo.count = 4 //foo指向他自己  具名函数 内部可以使用foo来引用自身
+// }
+
+// setTimeout(function(){
+//     // 匿名(没有名字的) 函数无法指向他自己
+// })
+
+// 调用栈
+
+// function baz(){
+//     // 当前调用栈 baz
+//     // => 当前调用位置是 全局作用域 
+//     console.log('baz')
+//     bar() // bar的调用位置 
+// }
+//  function bar() {
+//      // 当前调用栈(正在执行的函数) 是baz -> bar  js解析到这, 调用栈从baz 切到 bar 
+//     //  因为调用位置 是指 当前正在执行的函数 的上一个调用中
+// // 因此，当前调用位置在baz 中
+// console.log( "bar" );
+// foo(); // <-- foo 的调用位置
+//  }
+
+//  function foo() {
+// // 当前调用栈是baz -> bar -> foo
+// // 因此，当前调用位置在bar 中
+// console.log( "foo" );
+// }
+// baz(); // <-- baz 的调用位置
+
+// 调用位置就在当前正在执行的函数的前一个调用中
+
+// // 隐式绑定
+
+// function foo(){
+//     console.log(this.a);
+    
+// }
+//   var obj =  {
+//       a : 2,
+//       foo : foo
+//   }
+//   obj.foo(); //2  
+// function foo() {
+//     console.log( this.a );   //  调用栈是foo 调用位置是正在执行函数的上一个调用中
+// }
+// var obj = {
+//     a: 2,
+//     foo: foo
+// };
+// var bar = obj.foo; // 函数别名！
+// var a = "oops, global"; // a 是全局对象的属性
+// bar();  //  "oops, global"
+</script>
+</html>

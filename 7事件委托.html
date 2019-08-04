@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件委托</title>
+</head>
+<style> 
+  ul{
+      background-color: red;
+  }
+  li{
+      background-color: blueviolet;
+  }
+  p{
+       background-color: lightgreen;
+  }
+</style>
+<body>
+    <ul id="father">
+        <li>
+            <p>1234</p>
+        </li>
+        <li>
+            <p>data</p>
+        </li>
+    </ul>
+</body>
+<script>
+  document.getElementById('father').addEventListener("click",function(e){
+    //   兼容处理
+    var event = e || window.event;
+    var target = event.target || event.srcElement;
+    if(e.target.nodename === p ){
+        console.log('ni chju ds ')
+    }
+  })
+
+</script>
+</html>
+

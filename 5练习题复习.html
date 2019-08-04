@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>练习题</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //  1 
+// console.log(a);  //undefined 
+// var a = 12;   
+// function fn() {
+//     console.log(a) 
+//     var a = 13
+// }
+// fn()      // undefined
+// console.log(a)  // 12 
+
+//    2
+// var foo =1 
+// function bar(){
+//     if (!foo){
+//         var foo = 10
+//     }
+//     console.log(foo)   // =>undefined
+// }
+
+    // 3 
+// var n = 0 
+// function a(){
+//     var n = 10
+//     function b(){
+//         n++
+//         console.log(n)  
+//     }
+//     b()  
+//     return b
+// }
+// var c = a()    // 11
+// c()     //12
+// console.log(n)
+  
+
+//     //  4 
+// var a = 10 , b = 11, c = 12;
+// function test(a){
+//      a = 1 
+//      var b = 2
+//      c = 3
+// }
+// test(10)   // => 这里 a 形参赋值 为  10 ,使得a称为私有变量,跟全局没关系;
+//                 //  代码往下执行,使得a 由 10  => 1 (这是私有的不会让全局的a改变)
+// console.log(a)
+// console.log(b)
+// console.log(c)
+
+    //  5   
+//  if ( !("a" in window)) {
+//       var a = 1   
+//  }
+// console.log(a) // undefined   
+
+        // 6 
+//  var a = 4  
+//  function b(x,y,a) {
+//      console.log(a)   // a = 3 
+//      arguments[2] = 10    
+//      console.log(a);
+     
+//  }
+
+//   a = b (1,2,3)  // => a = b执行的返回结果 ,看执行的返回结果就看函数体中有没有return
+// //    有就返回return 没有就是undefined  
+//   console.log(a)   // undefined [b()没有return]   
+
+
+        //  7 
+    // function fn(x,y){
+    //     var arg = arguments
+    //     arg[0] = 100
+    //     console.log(x)
+    //     y=200
+    //     console.log(arg[1]);
+    //     }  // => undefined  why?  是因为argments 只跟你传进来的形参形参映射
+    // fn(10)   ( 使得 fn(x = 10 ; y = undefined))
+         
+
+        //  8   逻辑或 与 逻辑非 的应用
+        //   var foo = 'hello';
+        //   (function(foo){
+        //       console.log(foo);   // var foo 这一步省略,,因为在私有作用域下已经形参赋值了
+        //       var foo = foo || 'world'  
+        //       console.log(foo);
+                            
+        //   })(foo)   // 把全局下的foo的值作为实参传递给函数的形参 => 'hello'
+        //   console.log(foo);
+
+        //  && 与 ||
+        // var a = 1 || 2 ; // => 首先验证1 是否为真,如果为真,把1赋值给a , 如果为假,把2赋值给a
+        //     //   A||B A为真,就返回第一位
+        // var b = 1 && 2 ; // =>  看第一个是否为真,为真,赋值第二位, 为假,赋值第一位
+        // //   A&&B 先验证A的真假,(只验证最左边的) A为真,返回B; A为假,返回假
+
+            //    9
+//   var a = 9
+//   function fn() {
+
+//       a = 0
+//       return function(b){
+//           return b+a++
+//       }
+//   }
+//   var f = fn()
+//   console.log(f(5));
+//   console.log(fn()(5));   // fn()是不传参把他在执行  // 这里把全局的a = 1
+//   console.log(f(5));     
+//   console.log(a); 
+            //  10
+    // function fn(i) {
+    //     return function (n) {
+    //         console.log(n + (i++))
+    //     }
+    // }
+    // var f =  fn(10) 
+    // f(20)
+    // fn(20)(40)
+    // fn(30)(50)
+    // f(30)
+                // 11 
+//   var i = 10   // 这个在i外面 是全局变量
+//   function fn(){
+//       return function (n) {
+//           console.log(n + (++i));
+          
+//       }
+//   }
+//  var f = fn() 
+//  f(20)
+//  fn()(20)
+//  fn()(30)
+//  f(30)
+         
+</script>
+</html>
