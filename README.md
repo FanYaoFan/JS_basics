@@ -64,14 +64,14 @@ eg var obj = JSON.parse( '{ "a" : "Hello", "b" : "world"}') => { a : 'hello' , b
 JS => JSON 
 2. JSON.stringify()
 var json = JSON.stringify( a : 'hello' , b : 'world') => { "a" : "Hello", "b" : "world"}  
-### 2 数组
+## 2 数组
 ### 2.1 API 
 1. 意义
 2. 参数  
 3. 方法的返回值  
 4. 是否改变原有数组
 ***  
- **push/pop**       
+ #### 2.1.1 push/pop         
 __push__  
 * 作用: 数组末尾添加  
 * 参数: 添加的内容
@@ -83,7 +83,7 @@ __pop__
 * 返回值: 被删除项的值
 * 原有数组改变
 ___
-**shift&ushift**  
+ #### 2.1.2 shift&ushift 
 __shift__  
 * 作用: 删除数组第一项  
 * 参数: 无
@@ -95,7 +95,7 @@ __unshift __
 * 返回值: 新增后的数组长度 length
 * 原有数组改变 
 ___
-**splice**    
+ #### 2.1.3 splice    
 操作任意项     
 * 1 __删除__ ary.splice(n,m)
 从索引n开始,删除m项的内容
@@ -115,7 +115,7 @@ pop/splice(ary.length-1)/ary.length--
 项末尾追加内容有几种方法  
 push/splice(ary.length , 0 ,xx)/ary[ary.length]
 ___
-**slice**  
+ #### 2.1.4 slice   
 在一个数组中,按照条件查找出其中的部分内容    
 参数 n,m 从索引n开始找到m,但不包括m  
 返回值: 以一个新的数组存储查找内容  
@@ -124,14 +124,14 @@ slice(2,6)  即 找到的是 从 2~5的
 concat 
 数组克隆,一般实现多个数组拼接 返回拼接后的新数组 原有数组不变
 ___  
-**转换**  
+### 2.2 转换  
 * 数组转化为字符串   
 tostring(默认以逗号分隔)    
 join(可以自定义分隔符号)   
 * 字符串转化为数组
 * split()
 ___   
-**数组排序**
+### 2.3 数组排序
 __sort()__
 a-b 升序 
 b-a 降序
@@ -141,10 +141,10 @@ indexOf & lastindexOf
 用来检测当前值 第一次/最后一次出现的索引值 > -1 就是含有这个值   
 if(ary.indexOf(100) > -1 ){ there is 100 }
 ***
-**数组去重** 
+### 2.4 数组去重 
 注意: 在用splice进行数组去重时会有数组塌陷的现象存在   
 数组塌陷,每次循环之后,索引进1  
-
+### 2.5 其他
 i++和++i 
 i++是先参与运算再自增 (先拉你=在打药)
 ++i是先自增再参与运算 (先打药在拉你)   
