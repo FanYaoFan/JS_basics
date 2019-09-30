@@ -71,25 +71,25 @@ var json = JSON.stringify( a : 'hello' , b : 'world') => { "a" : "Hello", "b" : 
 3. 方法的返回值  
 4. 是否改变原有数组
 ***  
- **push/pop**   
-push  
+ **push/pop**     
+  push  
 * 作用: 数组末尾添加  
 * 参数: 添加的内容
 * 返回值: 新增后的数组长度 length
 * 原有数组改变  
-pop  
+  pop  
 * 作用: 数组末尾删除  
 * 参数: 无
 * 返回值: 被删除项的值
 * 原有数组改变
 ___
 **shift&ushift**  
-shift  
+  shift  
 * 作用: 删除数组第一项  
 * 参数: 无
 * 返回值: 被删除项的值
 * 原有数组改变  
-unshift 
+  unshift 
 * 作用: 数组开始位置增加新内容 
 * 参数: 增加的内容
 * 返回值: 新增后的数组长度 length
