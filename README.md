@@ -146,10 +146,10 @@ if(ary.indexOf(100) > -1 ){ there is 100 }
 <img src="https://github.com/FanYaoFan/JS_basics/blob/master/img/aryfor.png"  height="350">
 <img src="https://github.com/FanYaoFan/JS_basics/blob/master/img/ary.png" width="1200">
 ### 2.5 其他
-i++和++i 
+__i++和++i__   
 i++是先参与运算再自增 (先拉你=在打药)  
 ++i是先自增再参与运算 (先打药在拉你)     
-逻辑与&&和逻辑或||  
+__逻辑与&&和逻辑或||__  
 var a = A || B 先验证A的真假,A为真就返回A 为假就返回b   
 var b = A && B 先验证A的真假,A为真就返回B ,为假就返回A  
 eg var a = 1 || 2 首先验证1是否为真,是真就把1赋值给a    
