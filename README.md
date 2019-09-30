@@ -142,9 +142,8 @@ indexOf & lastindexOf
 if(ary.indexOf(100) > -1 ){ there is 100 }
 ***
 ### 2.4 数组去重 
-注意: 在用splice进行数组去重时会有数组塌陷的现象存在   
-数组塌陷,每次循环之后,索引进1 
-<img src="https://github.com/FanYaoFan/JS_basics/blob/master/img/aryfor.png"  height="400">
+注意: 在用splice进行数组去重时会有数组塌陷的现象存在 数组塌陷,每次循环之后,索引进1   
+<img src="https://github.com/FanYaoFan/JS_basics/blob/master/img/aryfor.png"  height="350">
 <img src="https://github.com/FanYaoFan/JS_basics/blob/master/img/ary.png" width="1200">
 ### 2.5 其他
 i++和++i 
