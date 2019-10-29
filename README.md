@@ -51,8 +51,8 @@ function fn（）{xxx
 })();`  
 这种模式的好处：我们可以在a中创造很多内容（变量or函数）， 哪些需要调用，就暴露到返回的对象中。模块化实现的一种思想。
 #### 1.3.2 对象字面量
-```var obj1 = new Object() 
-var obj2 = {name : 'zs',age : 18,}```    
+`var obj1 = new Object() 
+var obj2 = {name : 'zs',age : 18,} `   
 ### 1.4 JSON  
 * 数据使用名/值对表示。
 * 使用大括号保存对象，每个名称后面跟着一个 ':'（冒号），名/值对使用 ,（逗号）分割。
@@ -64,50 +64,50 @@ eg var obj = JSON.parse( '{ "a" : "Hello", "b" : "world"}') => { a : 'hello' , b
 JS => JSON 
 2. JSON.stringify()
 var json = JSON.stringify( a : 'hello' , b : 'world') => { "a" : "Hello", "b" : "world"}  
-### 2 数组
+## 2 数组
 ### 2.1 API 
 1. 意义
 2. 参数  
 3. 方法的返回值  
 4. 是否改变原有数组
 ***  
- **push/pop**   
-push  
+ #### 2.1.1 push/pop         
+###### push  
 * 作用: 数组末尾添加  
 * 参数: 添加的内容
 * 返回值: 新增后的数组长度 length
 * 原有数组改变
-pop  
+###### pop  
 * 作用: 数组末尾删除  
 * 参数: 无
 * 返回值: 被删除项的值
 * 原有数组改变
 ___
-**shift&ushift**  
-shift  
+ #### 2.1.2 shift&ushift 
+###### shift  
 * 作用: 删除数组第一项  
 * 参数: 无
 * 返回值: 被删除项的值
-* 原有数组改变
-unshift 
+* 原有数组改变  
+###### unshift 
 * 作用: 数组开始位置增加新内容 
 * 参数: 增加的内容
 * 返回值: 新增后的数组长度 length
 * 原有数组改变 
 ___
-**splice**    
+ #### 2.1.3 splice    
 操作任意项     
-1 删除 ary.splice(n,m)
+* 1 __删除__ ary.splice(n,m)
 从索引n开始,删除m项的内容
 eg var arr = [12,23,34,45,9,20] splice(2,3) => [34,45,9]
 返回值 删除的部分已新数组返回  
 原数组改变  
-2 新增
+* 2 __新增__
 splice(n, 0 ,xxx)
 从索引n开始,删除0项,添加xxx 
 返回值 [] 原数组改变  
-var ary = [12,34,45,34,56] 要实现在34之后加一个xx, 则 splice(4,0 ,xx)
-3 修改  
+var ary = [12,34,45,34,56] 要实现在34之后加一个xx, 则 splice(4,0 ,xx)   
+* 3 __修改__  
 splice(n,m,x) 
 作用 把索引n开始,(包括索引n) 删除m项,新增x
 思考: 删除数组最后一项有几种方法  
@@ -115,7 +115,7 @@ pop/splice(ary.length-1)/ary.length--
 项末尾追加内容有几种方法  
 push/splice(ary.length , 0 ,xx)/ary[ary.length]
 ___
-**slice**  
+ #### 2.1.4 slice   
 在一个数组中,按照条件查找出其中的部分内容    
 参数 n,m 从索引n开始找到m,但不包括m  
 返回值: 以一个新的数组存储查找内容  
@@ -124,15 +124,15 @@ slice(2,6)  即 找到的是 从 2~5的
 concat 
 数组克隆,一般实现多个数组拼接 返回拼接后的新数组 原有数组不变
 ___  
-**转换**  
+### 2.2 转换  
 * 数组转化为字符串   
 tostring(默认以逗号分隔)    
 join(可以自定义分隔符号)   
 * 字符串转化为数组
 * split()
 ___   
-数组排序
-sort()
+### 2.3 数组排序
+__sort()__
 a-b 升序 
 b-a 降序
 reverse(反转数组) 
@@ -141,15 +141,16 @@ indexOf & lastindexOf
 用来检测当前值 第一次/最后一次出现的索引值 > -1 就是含有这个值   
 if(ary.indexOf(100) > -1 ){ there is 100 }
 ***
-数组去重 
-注意: 在用splice进行数组去重时会有数组塌陷的现象存在   
-数组塌陷,每次循环之后,索引进1  
-
-i++和++i 
-i++是先参与运算再自增 (先拉你=在打药)
-++i是先自增再参与运算 (先打药在拉你)   
-逻辑与&&和逻辑或||  
-var a = A || B 先验证A的真假,A为真就返回A 为假就返回b 
-var b = A && B 先验证A的真假,A为真就返回B ,为假就返回A
-eg var a = 1 || 2 首先验证1是否为真,是真就把1赋值给a  
+### 2.4 数组去重 
+注意: 在用splice进行数组去重时会有数组塌陷的现象存在 数组塌陷,每次循环之后,索引进1   
+<img src="https://github.com/FanYaoFan/JS_basics/blob/master/img/aryfor.png"  height="350">
+<img src="https://github.com/FanYaoFan/JS_basics/blob/master/img/ary.png" width="1200">
+### 2.5 其他
+__i++和++i__   
+i++是先参与运算再自增 (先拉你=在打药)  
+++i是先自增再参与运算 (先打药在拉你)     
+__逻辑与&&和逻辑或||__  
+var a = A || B 先验证A的真假,A为真就返回A 为假就返回b   
+var b = A && B 先验证A的真假,A为真就返回B ,为假就返回A  
+eg var a = 1 || 2 首先验证1是否为真,是真就把1赋值给a    
 
