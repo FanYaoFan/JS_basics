@@ -42,7 +42,9 @@ function converToArray(nodes){
 ```
 首先尝试创建数组的最简单方式,如果报错,则听过catch来捕获错误,然后手动来创建数组.
 ### 1.2.1  
-如图: NodeRelationship 
+如图:   
+<img src="https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/4DOM/DOMimg/NodeRelationship.png"></img>
+***  
 可以通过previousSibling和nextSibling属性访问统一列表中的其他节点.(注意:在列表中不止一个节点时,列表中的第一个节点的previousSibling属性值为null,同样的最后一个节点的nextSibling属性也为null;当只有一个节点时,都为null,且firstChild和lastChild都为null)  
 1. hasChildNodes()在节点包含一个或多个的情况下,返回true
 2. 所有节点都有最后一个属性是ownerDocument,都指向整个文档的文档节点
@@ -304,8 +306,9 @@ document.documentElement.clientWidth || document.body.clientWidth
 ```
 ## 6.2 offerset  
 top/left/width/height/parent
-在client的基础上加上border,和内容溢出没有关系; 如图 
-# client.png  
+在client的基础上加上border,和内容溢出没有关系;   
+如图  
+<img src="https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/4DOM/DOMimg/Client.png"></img>
 offersetParent:当前盒子的父级参照物 
 同一平面,元素的父级参照物个结构没有必然关系,默认他们的父级参照物都是body,参照物可以改变,构建出不同的平面即可(比如定位)
 ```JavaScript 
@@ -319,5 +322,7 @@ top/left/width/height
 scrollWidth/Height : 真实内容的宽高(需要考虑溢出)+padding
 scrollTop/left:滚动条卷去的宽度或者高度  
 最小值: 0  
-最大值: 真实页面的高度 - 屏幕的高度
+最大值: 真实页面的高度 - 屏幕的高度  
+# 7  键码 
+<img src="https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/4DOM/DOMimg/keyCode.png"></img>
 
