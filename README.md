@@ -1,4 +1,6 @@
 # JavaScript
+
+## 1 [作用域与闭包](https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/1%E4%BD%9C%E7%94%A8%E5%9F%9F/1%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.md)
 ## 1 作用域 
 ### 1.1 原理
 1 当浏览器的内核渲染和解析JS的时候,会提供一个供JS代码运行的环境,我们把这个环境称之为’全局作用域’ (global/window scope)   
