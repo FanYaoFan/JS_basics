@@ -7,7 +7,8 @@
 ## 5 [事件](https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/5%E4%BA%8B%E4%BB%B6/5%E4%BA%8B%E4%BB%B6.md)
 ## 6 [错误处理与调试](https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/6%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/6%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E4%B8%8E%E8%B0%83%E8%AF%95.md)
 *** 
-# 基本概述(可点击目录导航到具体md文件)[目录](#javascript-1)
+# 基本概述
+### 可点击目录导航到具体md文件查看)[目录](#javascript)
 ## 1 作用域 
 ### 1.1 原理
 1 当浏览器的内核渲染和解析JS的时候,会提供一个供JS代码运行的环境,我们把这个环境称之为’全局作用域’ (global/window scope)   
