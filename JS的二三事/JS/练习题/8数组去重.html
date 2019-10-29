@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组去重</title>
+</head>
+<body>
+    
+</body>
+<script>
+var arr = [ 12,4,12,12,4,5]
+// 去重思路: 
+// 每次拿出数组中的每一项，与后一项比较(最后一项不用比,它没得比)，重复就剔除 splice（）会有数组塌陷
+//    双重for循环
+   for( let i = 0; i < arr.length-1; i++){
+        var item = arr[i]
+        for( let k=i+1; k < arr.length; k++){
+            if(arr [i] = arr[k]){
+                arr.splice (k,1) 
+                // 每次删除一项,索引就会往前进1  
+                // 所以为了避免这种情况
+                k--
+            }
+        }
+   }
+   for ( let i = 0 ; i < ary.length; i++){
+       var item = arr[i]
+      if( typeof obj[item] !== 'undefined'){
+            arr.splice(i , 1)
+            i--     // 为了防止数组塌陷
+            continue
+      }
+    //   怎么存?  把一项作为对象的属性名和属性值存储进去
+      obj[item] = item     /*=> obj[1] = 1    => {1 : 1}*/
+   }
+
+</script>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原型与原型链</title>
+
+</head>
+
+<body>
+
+</body>
+<script>
+    //   1 
+    // function Fn() {
+    //     this.x = 100;
+    //     this.y = 200;
+    //     this.getX = function () {
+    //         console.log(this.x);
+    //     }
+    // }
+    // Fn.prototype.getX = function () {
+    //     console.log(this.x);
+
+    // };
+    // Fn.prototype.getY = function () {
+    //     console.log(this.y);
+    // }
+    // var f1 = new Fn;
+    // var f2 = new Fn;
+
+    // console.log(f1.getX === f2.getX);
+    // console.log(f1.getY === f2.getY);
+    // console.log(f1.__proto__.getY === Fn.prototype.getY);
+    // console.log(f1.__proto__.getX === Fn.prototype.getX);
+    // console.log(f1.__proto__.getX === f2.getX)
+    // console.log(f1.getX === Fn.prototype.getX);
+    // console.log(Fn.constructor);
+    // console.log(Fn.prototype.__proto__.constructor)
+    // f1.getX();
+    // f1.__proto__.getX();
+    // f2.getY();
+    // Fn.prototype.getY();
+
+    // 2 
+
+    // function fun() {
+    //     this.a = 0
+    //     this.b = function () {
+    //         console.log(a)
+    //     }
+    // }
+    // fun.prototype = {
+    //     b: function () {
+    //         this.a = 20
+    //         console.log(this.a)
+    //     },
+    //     c: function () {
+    //         this.a = 30
+    //         console.log(this.a)
+    //     }
+    // }
+    // var my_fun = new fun()
+    // my_fun.b()
+    // my_fun.c()
+
+
+
+    // 3  
+    function Fn() {
+        var n = 10
+        this.m = 20
+        this.aa = function 9) {
+            console.log(this.m)
+        }
+    }
+    Fn.prototype.bb = function () {
+        console.log(this.n)
+    }
+    var f1 = new Fn
+    Fn.prototype = {
+        aa: function () {
+            console.log(this.m + 10)
+        }
+    }
+    var f2 = new Fn
+    console.log(f1.constructor)
+    console.log(f2.constructor)
+    f1.bb()
+    f1.aa()
+    f2.bb()
+    f2.aa()
+    f2.__proto__.aa()
+
+    // 4 阿里巴巴原型体分析
+    getName = function Foo() {
+        console.log(1);
+        return this;
+    }
+    Foo.getNName = function () {
+        console.log(2);
+    }
+    Foo.prototype.getName = function () {
+        console.log(3);
+    }
+    var getName = function () {
+        console.log(4);
+    }
+    function getName() {
+        console.log(5);
+    }  //普通函数定义，使得一开始getName为5
+    Foo.getName();
+    getName();
+    Foo().getName();
+    new Foo.getName();
+    new Foo().getName();
+    new new Foo().getName();
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>变量提升</title>
+</head>
+<style>
+        .center{
+            margin: 0 auto;
+            text-align:center;
+        }
+        </style>
+<body>
+    <h1 class="center">变量提升练习 鼠标右键检查</h1>
+</body>
+<script>
+    // 1 条件判断
+    // f = function () {
+    //     return true
+    // }
+    // g = function () {
+    //     return false
+    // }
+    // ~function () {
+    //     if (g() && [] == ![]) {
+    //         //对g进行声明,在~function的私有作用域中
+    //         // 声明一个g()但没有定义
+    //         // 报错 g is not function
+    //         f = function () {
+    //             return false
+    //         }
+    //         function g() {
+    //             return true
+    //         }
+    //     }
+    // }()
+    // console.log(f())
+    // console.log(g())
+// 2 
+// if(1 === 1){
+//     console.log(fn)
+//     function fn(){
+//         console.log('ok')
+//     }
+// }
+// 3
+fn() //=> 4
+function fn(){console.log(1)}
+fn() //=> 4 
+function fn(){console.log(2)}
+fn() //=> 4 
+var fn = 100 
+fn() //=> 报错 这里执行的是 fn=100 即 100()
+function fn() {console.log(3)}
+function fn() {console.log(4)}
+// 4
+// var i = 1 
+// function fn(i) {
+//     return function(n) {
+//         console.log(n + (++ i))
+//     }
+// }
+// var f = fn(2) 
+// f(3)
+// fn(5)(6) 
+// f(4)
+</script>
+
+</html>

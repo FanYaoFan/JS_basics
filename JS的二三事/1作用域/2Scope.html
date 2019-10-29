@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作用域</title>
+</head>
+<style>
+    .center {
+        margin: 0 auto;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1 class="center">作用域练习 右键检查</h1>
+</body>
+<script>
+    // 1 **************** 
+    //     var a = 12, b = 12, c = 14;
+    //     function fn(a) {
+    //         console.log(a, b, c)
+    //         var b = c = a = 20
+    //         console.log(a,b,c)
+    //     }
+    // fn(a) 
+    // console.log(a,b,c)
+    //   2 ****************  
+    // var ary = [12,23]
+    // function fn(ary){
+    //     console.log(ary)
+    //     ary[0] = 100
+    //     ary = [100]
+    //     ary[0] = 0
+    //     console.log(ary) 
+    // }
+    // fn(ary) 
+    // console.log(ary)  
+    // 3 ****************  
+    // var a = 12
+    // function fn(){
+    //     console.log(a)
+    // }
+    // function sum() {
+    //     var a =120
+    //     fn()
+    // }
+    // sum() 
+    // 4 ****************  
+    // var n = 10 
+    // function fn() {
+    //     var n =20 
+    //     function f() {
+    //         n ++ 
+    //         console.log(n)
+    //     }
+    //     f() 
+    //     return f
+    // }
+    // var x = fn() 
+    // x()
+    // x() 
+    // console.log(n)
+    // 5 **************** 
+    // var n = 2
+    // var obj = {
+    //     n: 3,
+    //     fn: (function (n) {
+    //         n *= 2
+    //         this.n += 2
+    //         var n = 5
+    //         return function (m) {
+    //             this.n *= 2
+    //             console.log(m + (++n))
+    //         }
+    //     })(obj.n)
+    // }
+    // var fn = obj.fn
+    // fn(3)
+    // obj.fn(3)
+    // console.log(n, obj, n)
+
+
+
+
+
+</script>
+
+</html>
