@@ -42,7 +42,8 @@ js中用来检测数据类型的方式
 1. 闭包具有保护作用,保护私有变量不受外界干扰
 2. 闭包具有保存作用,形成一个不销毁的栈内存,把一些值保存下来,方便后面调用
 ```JavaScript
- var a = function(){  return function(){
+ var a = function(){ 
+ return function(){
       console.log(n)
     }
      )
@@ -132,14 +133,18 @@ var arr = [12,23,34,45,9,20] splice(2,3)
 splice(n, 0 ,xxx)
 从索引n开始,删除0项,添加xxx 
 返回值 [] 原数组改变  
+```JavaScript
 var ary = [12,34,45,34,56] 要实现在34之后加一个xx, 则 splice(4,0 ,xx)   
+```
 * 3 __修改__  
 splice(n,m,x) 
 作用 把索引n开始,(包括索引n) 删除m项,新增x
 思考: 删除数组最后一项有几种方法  
+```JavaScript
 pop/splice(ary.length-1)/ary.length--  
-项末尾追加内容有几种方法  
 push/splice(ary.length , 0 ,xx)/ary[ary.length]
+```
+项末尾追加内容有几种方法  
 ___
  #### 2.1.4 slice   
 在一个数组中,按照条件查找出其中的部分内容    
@@ -164,8 +169,10 @@ b-a 降序
 reverse(反转数组) 
 检测数组  
 indexOf & lastindexOf 
-用来检测当前值 第一次/最后一次出现的索引值 > -1 就是含有这个值   
+用来检测当前值 第一次/最后一次出现的索引值 > -1 就是含有这个值  
+```JavaScript
 if(ary.indexOf(100) > -1 ){ there is 100 }
+```
 ***
 ### 2.4 数组去重 
 注意: 在用splice进行数组去重时会有数组塌陷的现象存在 数组塌陷,每次循环之后,索引进1   
