@@ -40,12 +40,15 @@ js中用来检测数据类型的方式
 函数执行形成一个私有作用域，保护里面的内容不受外界干扰也可以认为是形成一个不销毁的私有作用域(私有栈内存)  
 作用: 
 1. 闭包具有保护作用,保护私有变量不受外界干扰
-2. 闭包具有保存作用,形成一个不销毁的栈内存,把一些值保存下来,方便后面调用  
-    `var a = function(){  return function(){
+2. 闭包具有保存作用,形成一个不销毁的栈内存,把一些值保存下来,方便后面调用
+```JavaScript
+ var a = function(){  return function(){
       console.log(n)
     }
-     )`  
+     )
     var b = a ;
+```
+   
 ### 1.3 面向对象 
 面向对象编程(object oriented programming)  
 #### 1.3.1 单例设计模式(singleton partern) 
@@ -54,11 +57,14 @@ obj 不仅仅是对象名,还是一个命名空间
 2 作用:  
 把描述同一事物的属性和特征进行'分组','归类'(避免与全局之间冲突和污染)
 3 高级单例模式:  
-`let nameSpace =（function（）{
+```JavaScript
+let nameSpace =（function（）{
 let a=12；
 function fn（）{xxx
 } return { fn}
-})();`  
+})()
+```
+
 这种模式的好处：我们可以在a中创造很多内容（变量or函数）， 哪些需要调用，就暴露到返回的对象中。模块化实现的一种思想。
 #### 1.3.2 对象字面量
 `var obj1 = new Object() 
@@ -69,11 +75,16 @@ var obj2 = {name : 'zs',age : 18,} `
 * 使用方括号保存数组，数组值使用 ,（逗号）分割。  
 转换  
 JSON => JS
+```JavaScript
 1. JSON.parse() 
 eg var obj = JSON.parse( '{ "a" : "Hello", "b" : "world"}') => { a : 'hello' , b : 'world'}
-JS => JSON 
+```  
 2. JSON.stringify()
+```JavaScript
 var json = JSON.stringify( a : 'hello' , b : 'world') => { "a" : "Hello", "b" : "world"}  
+```
+JS => JSON 
+
 ## 2 数组
 ### 2.1 API 
 1. 意义
@@ -109,7 +120,12 @@ ___
 操作任意项     
 * 1 __删除__ ary.splice(n,m)
 从索引n开始,删除m项的内容
-eg var arr = [12,23,34,45,9,20] splice(2,3) => [34,45,9]
+eg 
+```JavaScript
+var arr = [12,23,34,45,9,20] splice(2,3)
+//=> [34,45,9]
+```
+
 返回值 删除的部分已新数组返回  
 原数组改变  
 * 2 __新增__
