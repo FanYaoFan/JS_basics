@@ -1,11 +1,11 @@
 # JavaScript
 ## 目录
-## 1 [作用域与闭包](https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/1%E4%BD%9C%E7%94%A8%E5%9F%9F/1%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.md)
-## 2 [面向对象设计](https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/2%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.md)
+## 1 [作用域与闭包](https://github.com/FanYaoFan/JS_basics/blob/master/JS/1%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md)
+## 2 [面向对象设计](https://github.com/FanYaoFan/JS_basics/blob/master/JS/2%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/README.md)
 ## 3 [原型](https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/3%E5%8E%9F%E5%9E%8B/3%E5%8E%9F%E5%9E%8B.md)
-## 4 [DOM](https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/4DOM/4Dom.md)
-## 5 [事件](https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/5%E4%BA%8B%E4%BB%B6/5%E4%BA%8B%E4%BB%B6.md)
-## 6 [错误处理与调试](https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/6%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/6%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E4%B8%8E%E8%B0%83%E8%AF%95.md)
+## 4 [DOM](https://github.com/FanYaoFan/JS_basics/blob/master/JS/4DOM/README.md)
+## 5 [事件](https://github.com/FanYaoFan/JS_basics/blob/master/JS/5%E4%BA%8B%E4%BB%B6/README.md)
+## 6 [错误处理与调试](https://github.com/FanYaoFan/JS_basics/blob/master/JS/6%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/README.md)
 *** 
 # 基本概述
 ### 可点击目录导航到具体md文件查看)[目录](#javascript)
