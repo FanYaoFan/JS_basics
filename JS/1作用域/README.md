@@ -181,7 +181,7 @@ sum()
     console.log(a,b,c)
 ```  
 解析  
-<img src="https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/1%E4%BD%9C%E7%94%A8%E5%9F%9F/scopeImg/scope1.png"></img>
+<img src="https://github.com/FanYaoFan/JS_basics/blob/master/JS/1%E4%BD%9C%E7%94%A8%E5%9F%9F/scopeImg/scope1.png"></img>
 ***
 ### 2 
 ```JavaScript
@@ -197,7 +197,7 @@ var ary = [12,23]
     console.log(ary)  
 ```
 解析:
-<img src="https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/1%E4%BD%9C%E7%94%A8%E5%9F%9F/scopeImg/Scope3.png"></img>
+<img src="https://github.com/FanYaoFan/JS_basics/blob/master/JS/1%E4%BD%9C%E7%94%A8%E5%9F%9F/scopeImg/Scope3.png"></img>
 ***
 ### 3  
 ```JavaScript
@@ -217,4 +217,4 @@ var ary = [12,23]
     console.log(n)
 ```
 解析:
-<img src="https://github.com/FanYaoFan/JS_basics/blob/master/JS%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/1%E4%BD%9C%E7%94%A8%E5%9F%9F/scopeImg/Scope4.png"></img>
+<img src="https://github.com/FanYaoFan/JS_basics/blob/master/JS/1%E4%BD%9C%E7%94%A8%E5%9F%9F/scopeImg/Scope4.png"></img>
